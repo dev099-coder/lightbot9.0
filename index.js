@@ -873,8 +873,8 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 					if (mentioned.length > 1) {
 						teks = ''
 						for (let _ of mentioned) {
-							teks += `I ala perdeu adm otário fez merda ne ou mamou mal o adm?😳 :\n`
-							teks += `@_.split('@')[0]`
+							teks += `I ala perdeu adm otário fez merda ne ou mamou mal o adm?😳\n`
+							teks += `@_.split('@')[0]\n`
 						}
 						mentions(teks, mentioned, true)
 						client.groupDemoteAdmin(from, mentioned)
