@@ -736,12 +736,6 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 						})
 					})
 					break
-				case 'setprefix':
-					if (args.length < 1) return
-					if (!isOwner) return reply(ind.ownerb())
-					prefix = args[0]
-					reply('O prefixo foi alterado com sucesso para : ${prefix}`)
-					break 
 				case 'enctexto': 
 				if (!isRegistered) return reply(ind.noregis())
 				if (getLevelingLevel(sender) < ahc ) return reply(ind.reglevel(command, pushname, getLevelingLevel, sender, ahc))
