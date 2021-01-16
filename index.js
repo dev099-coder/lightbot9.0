@@ -911,7 +911,7 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 					if (mentioned.length > 1) {
 						teks = ''
 						for (let _ of mentioned) {
-							teks += (`Aeeee finalmente a lista de membros é reduzida 🏃 :\n`)
+							teks += ('Aeeee finalmente a lista de membros é reduzida 🏃\n'
 							teks += `@_.split('@')[0]`
 						}
 						mentions(teks, mentioned, true)
