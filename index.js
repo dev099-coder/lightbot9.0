@@ -917,7 +917,7 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 						}
 						mentions(teks, mentioned, true)
 						client.groupRemove(from, mentioned)
-					} else {
+				
 						mentions(`Pedidos recebidos, emitidos : @${mentioned[0].split('@')[0]}`, mentioned, true)
 						client.groupRemove(from, mentioned)
 					client.sendMessage(mentioned, 'yahaha Lu kekick😂', text)
