@@ -893,7 +893,7 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 						teks = ''
 						for (let _ of mentioned) {
 							teks += `Foi muitos anos de estudo, dedicação para virar adm parabens :\n`
-							teks += `@_.split('@')[0]`
+							teks += `@_.split('@')[0]\n`
 						}
 						mentions(teks, mentioned, true)
 						client.groupMakeAdmin(from, mentioned)
@@ -912,7 +912,7 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 						teks = ''
 						for (let _ of mentioned) {
 							teks += ('Aeeee finalmente a lista de membros é reduzida 🏃\n'
-							teks += `@_.split('@')[0]`
+							teks += `@_.split('@')[0]\n`
 						}
 						mentions(teks, mentioned, true)
 						client.groupRemove(from, mentioned)
