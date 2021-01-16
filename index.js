@@ -958,7 +958,7 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (args.length < 1) return reply('*Deseja ativar ou desativar?*')
 					if (Number(args[0]) === 1) {
-						if (isSimi) return reply('*O modo simi já está ativado*')
+						if (isSimi) return reply('*O modo simi já está ativado!*')
 						samih.push(from)
 						fs.writeFileSync('./src/simi.json', JSON.stringify(samih))
 						reply('*O modo simi foi ativado...*')
