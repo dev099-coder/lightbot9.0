@@ -893,7 +893,7 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 						teks = 'Berhasil Promote\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
-						}
+						
 						mentions(from, mentioned, true)
 						client.groupRemove(from, mentioned)
 					} else {
