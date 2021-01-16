@@ -901,23 +901,25 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 						client.groupMakeAdmin(from, mentioned)
 					}
 					break
-			     	case 'ban':
-					if (!isGroup) return reply(ind.groupo())
-					if (!isGroupAdmins) return reply(ind.admin())
-					if (!isBotGroupAdmins) return reply(ind.badmin())
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marque a pessoa!')
+			     	
+                                case 'ban':
+					client.updatePresence(from, Presence.composing) 
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di tendang!')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = ''
+						teks = 'Pedidos recebidos, emitidos :\n'
 						for (let _ of mentioned) {
-							teks += `Ban solicitação para banido sucesso 🏃 :\n`
-							teks += `@_.split('@')[0]`
+							teks += `@${_.split('@')[0]}\n`
 						}
 						mentions(teks, mentioned, true)
 						client.groupRemove(from, mentioned)
-					
-						mentions(`Ban solicitação para @${mentioned[0].split('@')[0]} banido com sucesso🏃`, mentioned, true)
+					} else {
+						mentions(`Pedidos recebidos, emitidos : @${mentioned[0].split('@')[0]}`, mentioned, true)
 						client.groupRemove(from, mentioned)
+					client.sendMessage(mentioned, 'yahaha Lu kekick😂', text)
 					}
 					break
 				case 'ademirlista':
