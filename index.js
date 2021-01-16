@@ -901,34 +901,7 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 						client.groupMakeAdmin(from, mentioned)
 					}
 					break
-
-				case 'ademirlista':
-					if (!isGroup) return reply(ind.groupo())
-					teks = `𝗟𝗶𝘀𝘁 ADEMIR✌️😳 *${groupMetadata.subject}*\n𝗧𝗼𝘁𝗮𝗹 : ${groupAdmins.length}\n\n`
-					no = 0
-					for (let admon of groupAdmins) {
-						no += 1
-						teks += `[${no.toString()}] @${admon.split('@')[0]}\n`
-					}
-					mentions(teks, groupAdmins, true)
-					break
-				case 'obterimg':
-				if (!isRegistered) return reply(ind.noregis())
-				if (getLevelingLevel(sender) < ahb ) return reply(ind.reglevelahb(command, pushname, getLevelingLevel, sender, ahb))
-					if (!isQuotedSticker) return reply('𝗥𝗲𝗽𝗹𝘆/𝘁𝗮𝗴 𝘀𝘁𝗶𝗰𝗸𝗲𝗿 !')
-					reply(ind.wait())
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await client.downloadAndSaveMediaMessage(encmedia)
-					ran = getRandom('.png')
-					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
-						fs.unlinkSync(media)
-						if (err) return reply(ind.stikga())
-						buffer = fs.readFileSync(ran)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: '𝗱𝗮?? 𝗷𝗮𝗱𝗶 '})
-						fs.unlinkSync(ran)
-					})
-					break
-               case 'simi':
+                               case 'simi':
 					if (args.length < 1) return reply('Onde está o texto, Acha que sou vidente?😤')
 					teks = body.slice(5)
 					anu = await simih(teks) //fetchJson(`http://simsumi.herokuapp.com/api?text=${teks}`, {method: 'get'})
