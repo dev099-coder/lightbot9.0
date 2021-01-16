@@ -896,7 +896,7 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 						
 						mentions(from, mentioned, true)
 						client.groupRemove(from, mentioned)
-					} else {
+					
 						mentions(`Foram muitos anos de estudo, @${mentioned[0].split('@')[0]} dedicação para virar adm parabens😳✌️`, mentioned, true)
 						client.groupMakeAdmin(from, mentioned)
 					}
