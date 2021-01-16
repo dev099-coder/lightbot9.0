@@ -836,7 +836,7 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 					if (!isGroupAdmins) return reply(ind.admin())
 					if (!isBotGroupAdmins) return reply(ind.badmin())
 					if (args[0] === 'Abrir') {
-					    reply`Grupo aberto fml🥳`)
+					    reply(`Grupo aberto fml🥳`)
 						client.groupSettingChange(from, GroupSettingChange.messageSend, false)
 					} else if (args[0] === 'Fechar') {
 						replygrupo fechado rapeize la vem palestra do Ademir✌️`)
