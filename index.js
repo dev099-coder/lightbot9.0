@@ -898,7 +898,7 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 						mentions(teks, mentioned, true)
 						client.groupMakeAdmin(from, mentioned)
 					} else {
-						mentions(`Foi muitos anos de estudo, dedicação para virar adm parabens😳✌️ @${mentioned[0].split('@')[0 Agora mama o dev Java`) `, mentioned, true)
+						mentions(`Foi muitos anos de estudo, dedicação para virar adm parabens😳✌️ @${mentioned[0].split('@')[0`, mentioned, true)
 						client.groupMakeAdmin(from, mentioned)
 					}
 					break	
