@@ -839,7 +839,7 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 					    reply(`Grupo aberto fml🥳`)
 						client.groupSettingChange(from, GroupSettingChange.messageSend, false)
 					} else if (args[0] === 'Fechar') {
-						reply('grupo fechado rapeize la vem palestra do Ademir✌️`)
+						reply('grupo fechado rapeize la vem palestra do Ademir✌️')
 						client.groupSettingChange(from, GroupSettingChange.messageSend, true)
 					}
 					break      
