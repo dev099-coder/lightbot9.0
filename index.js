@@ -877,8 +877,7 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 							
 						}
 						mentions(teks, mentioned, true)
-						client.groupDemoteAdmin(from, mentioned)
-					} else {
+						client.groupDemoteAdmin(from, mentioned
 						mentions(`@${mentioned[0].split('@')[0]} [1848589201] Concluido!`, mentioned, true)
 						client.groupDemoteAdmin(from, mentioned)
 					}
