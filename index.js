@@ -740,7 +740,7 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 					if (args.length < 1) return
 					if (!isOwner) return reply(ind.ownerb())
 					prefix = args[0]
-					reply('Prefixo altera com sucesso : ${prefix}`)
+					reply('O prefixo foi alterado com sucesso para : ${prefix}`)
 					break 
 				case 'enctexto': 
 				if (!isRegistered) return reply(ind.noregis())
