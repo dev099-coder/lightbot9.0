@@ -901,8 +901,9 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 						client.groupMakeAdmin(from, mentioned)
 					}
 					break
-			     	
-                                case 'ban':
+			         case 'kick':
+			         case 'banimento':
+			         case 'remover':
 					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
@@ -910,7 +911,7 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di tendang!')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = 'Pedidos recebidos, emitidos :\n'
+						teks = 'Pedido Recebido, Segredo :\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
