@@ -884,24 +884,23 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 					}
 					break
 				case 'promover':
-					if (!isGroup) return reply(ind.groupo())
-					if (!isGroupAdmins) return reply(ind.admin())
-					if (!isBotGroupAdmins) return reply(ind.badmin())
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marque o devido membro comum para virar adm!')
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = ''
+						teks = 'Berhasil Promote\n'
 						for (let _ of mentioned) {
-							teks += `Foi muitos anos de estudo, dedicação para virar adm parabens :\n`
-							`
+							teks += `@${_.split('@')[0]}\n`
 						}
-						mentions(teks, mentioned, true)
-						client.groupMakeAdmin(from, mentioned)
+						mentions(from, mentioned, true)
+						client.groupRemove(from, mentioned)
 					} else {
-						mentions(`Foi muitos anos de estudo, dedicação para virar adm parabens😳✌️`)
+						mentions(`Foram muitos anos de estudo, @${mentioned[0].split('@')[0]} dedicação para virar adm parabens😳✌️`, mentioned, true)
 						client.groupMakeAdmin(from, mentioned)
 					}
-					break	
+					break
 			     	case 'ban':
 					if (!isGroup) return reply(ind.groupo())
 					if (!isGroupAdmins) return reply(ind.admin())
