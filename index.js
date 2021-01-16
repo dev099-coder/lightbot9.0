@@ -814,7 +814,7 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
                         if (!isBotGroupAdmins) return reply(ind.badmin())
                        media = await client.downloadAndSaveMediaMessage(mek)
                          await client.updateProfilePicture (from, media)
-                        reply'sucesso alterado')
+                        reply('sucesso alterado')
                 break						
 				case 'adicionar':
 					if (!isGroup) return reply(ind.groupo())
