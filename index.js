@@ -915,7 +915,7 @@ queios* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}`
 						}
 						mentions(teks, mentioned, true)
 						client.groupRemove(from, mentioned)
-					} else {
+					
 						mentions(`Ban solicitação para @${mentioned[0].split('@')[0]} banido com sucesso🏃`, mentioned, true)
 						client.groupRemove(from, mentioned)
 					}
